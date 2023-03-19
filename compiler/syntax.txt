@@ -1,0 +1,14 @@
+program   : statement*
+statement : macro 
+          | reduced
+          | full
+          | origin
+macro     : MACRO IDENTIFIER IDENTIFIER* '{' statement* '}'
+reduced   : term{1,3} ';'
+full      : '.' term* ';'
+origin    : ORIGIN NUMBER 
+term      : label* operand*
+operand   : NUMBER 
+          | IDENTIFIER 
+          | '?'
+label     : IDENTIFIER ':'

@@ -1,0 +1,41 @@
+# macro add(a b c) {
+#     # c = a + b
+#     [z: 0]
+#     a z; b z; z c; z z return;
+#     return:;
+# }
+
+# input z;
+# z a;
+# z;
+# input z;
+# z b;
+# z;
+# a z;
+# b z;
+# z output;
+# z z stop;
+
+start: 
+    z z ?;
+    data_pointer: data z; z output; z;  # print *(data_pointer+i)
+    n1 data_pointer;                    # incrment data_pointer
+    
+    # decriment _i, if _i = 0, jump to stop 
+    n1 _i stop;
+
+
+[
+    data: 1 1 2 3 5 8
+    # data_len: 6
+    _i: 5
+    n1: 0xFF
+]
+
+
+.org 0xE000
+[
+    input:0
+    output: 0
+]
+.org 0xFFFF [stop: 0]
