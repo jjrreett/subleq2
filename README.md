@@ -29,14 +29,19 @@ Other TODOs:
 TODO 
 
 ### Flight Simulator
-I was thinking it would be cool to hook this up to KSP. That would be cool because it get me a GUI, but comes with a bit of overhead? It might not be as hard as I think, but I am causous. 
+I was thinking it would be cool to hook this up to KSP. That would be cool because it get me a GUI, but comes with a bit of overhead? It might not be as hard as I think, if I can get KSP to interact with the computer as a usb device and get sensor data in a similar way. But it also might be a ton of work.
+
 I could build a sim with matlab/simulink/simscape. But that is decidedly closed source. 
+
 I could do it in a game engine, but I don't want to learn one unless its easy. 
+
 I could write a simulator manually, but I want a GUI and I want to actually finish this project 
 
 ### Code
-I have to build a RTOS that can compile to a custom architecture. I have chosen to write my owen assembly language.
-compiler/contains the start to that. 
+I have to build a RTOS that can compile to a custom architecture. I have chosen to write my owen assembly language. compiler/ contains the start to that. 
+
 This is a python module that can tokenize the input stream, ./program.subleq for now. Then parse that token stack into an ast. Then render the ast to machine code. 
+
 Then I either write the os in the assembly language (adding some higher level features along the way), or build a language on top of the assembly. 
-Ahhhhh lots of work. 
+
+AAAAAh lots of work. 
