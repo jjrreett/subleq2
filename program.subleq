@@ -19,9 +19,9 @@
 start: 
     z z ?;
     data_pointer: data z; z output; z;  # print *(data_pointer+i)
-    n1 data_pointer;                    # incrment data_pointer
+    n1 data_pointer;                    # increment data_pointer
     
-    # decriment _i, if _i = 0, jump to stop 
+    # decrement _i, if _i = 0, jump to stop 
     n1 _i stop;
 
 
