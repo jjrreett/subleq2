@@ -59,7 +59,6 @@ def visit_nodes(root: NodeMixin, name: str, func: Callable):
 def replace_reduced_nodes(root: NodeMixin):
     for node in root.descendants:
         if isinstance(node, ReducedNode):
-            print(f"looking at {node=}")
             if node.order == 3:
                 new_node = FullNode(node.children)
                 new_node.parent = node.parent
