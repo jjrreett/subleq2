@@ -1,0 +1,41 @@
+program :=
+    statement*
+
+statement :=
+    macro 
+    macro_call
+    reduced
+    full
+    origin
+
+macro :=
+    MACRO IDENTIFIER '(' IDENTIFIER* ')' '{' statement* '}'
+
+macro_call :=
+    IDENTIFIER '(' IDENTIFIER* ')'
+
+reduced :=
+    term{1,3} ';'
+
+full :=
+    '[' term* ']'
+
+origin :=
+    ORIGIN NUMBER 
+
+term := 
+    label* operand*
+
+label :=
+    IDENTIFIER ':'
+
+operand :=
+    IDENTIFIER 
+    ADR_EXP
+
+ADR_EXP :=
+    '&' NUMBER 
+    '?'
+    '?' + NUMBER 
+    '? - NUMBER 
+    '(' ADR_EXP ')'

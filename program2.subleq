@@ -1,0 +1,23 @@
+start: 
+    z z ?;
+    data_pointer: data z; z output; z;  # print *(data_pointer+i)
+    n1 data_pointer;                    # increment data_pointer
+    
+    # decrement _i, if _i = 0, jump to stop 
+    n1 _i stop;
+
+
+[
+    data: 1 1 2 3 5 8
+    # data_len: 6
+    _i: 5
+    n1: 0xFF
+]
+
+
+.org 0xE000
+[
+    input:0
+    output: 0
+]
+.org 0xFFFF [stop: 0]
